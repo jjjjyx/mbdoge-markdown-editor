@@ -2,19 +2,17 @@
   "name": "mbdogemde-markdown-editor",
   "version": "0.0.3",
   "private": false,
+  "main": "dist/mbdoge.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve ./examples/main.js --open",
-    "build": "vue-cli-service build  --target wc --name mbdoge-editor ./src/mbdoge-editor.vue",
+    "build": "vue-cli-service build  --target lib --name mbdoge ./src/index.js",
     "lint": "vue-cli-service lint"
   },
-  "license": "MIT",
-  "files": [
-    "lib",
-    "src",
-    "dist"
-  ],
+  "dependencies": {
+    "marked": "^0.6.1"
+  },
   "peerDependencies": {
-    "vue": "^2.6.6"
+    "vue": "^2.6.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
@@ -24,11 +22,21 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.21"
+    "node-sass": "^4.9.4",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.6.8",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.6.8"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "files": [
+    "lib",
+    "src",
+    "dist"
+  ],
+  "license": "MIT"
 }
