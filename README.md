@@ -1,29 +1,7 @@
-# mbdogemde-markdown-editor
+# mbdogem-markdown-editor
 
-## Project setup
-```
-npm install
-```
+开发进度
+* 工具栏 完成
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 下一步目标
+* 编辑器高度适应，可指定高度，或者适应父类高度

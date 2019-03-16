@@ -1,0 +1,53 @@
+// 工具栏
+.doge-toolbar {
+  position: relative;
+  user-select: none;
+  padding: 10px 10px;
+  border-top: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.doge-toolbar__separator {
+  //display: inline-block;
+  width: 0;
+  border-left: 1px solid #d9d9d9;
+  border-right: 1px solid #fff;
+  color: transparent;
+  text-indent: -10px;
+  margin: 0 6px;
+}
+.doge-toolbar__btn {
+  outline: 0;
+  background: 0 0;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none!important;
+  margin: 0 3px;
+  padding: 0;
+  border: 1px solid transparent;
+
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border .3s ease-out, background-color .3s ease-out;
+  &:hover {
+    border: 1px solid #ddd;
+    background: #eee;
+  }
+}
+
+.doge-toolbar--normal {
+  .doge-toolbar__btn {
+    width: 24px;
+    height: 24px;
+  }
+}
+.doge-toolbar--disabled-for-preview {
+  .doge-toolbar__btn:not(.doge-toolbar__btn--no-disable) {
+    opacity: .6;
+    pointer-events: none;
+  }
+}
+

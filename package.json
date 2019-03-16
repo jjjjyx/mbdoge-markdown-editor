@@ -1,5 +1,5 @@
 {
-  "name": "mbdogemde-markdown-editor",
+  "name": "mbdoge-markdown-editor",
   "version": "0.0.4",
   "private": false,
   "main": "dist/mbdoge.umd.min.js",
@@ -15,6 +15,10 @@
     "vue": "^2.6.8"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "@babel/plugin-syntax-jsx": "^7.0.0",
+    "@vue/babel-helper-vue-jsx-merge-props": "^0.1.0",
+    "@vue/babel-plugin-transform-vue-jsx": "^0.1.0",
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
