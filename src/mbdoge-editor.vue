@@ -1,21 +1,12 @@
 <template>
-    <div class="doge-wrapper">
+    <div :class="wrapperClasses" :style="wrapperStyles">
         <div :class="toolbarClasses">
             <!--<template v-for="btn in toolbar">-->
-                <!---->
+            <!---->
             <!--</template>-->
             <doge-functional-btn v-for="(item, index) in toolbar" :item="item" :key="index"></doge-functional-btn>
         </div>
-        <div class="mb-doge">
-            <!--<div class="col">-->
-                <!--<textarea  v-model="source"></textarea>-->
-            <!--</div>-->
-            <!--<div class="col">-->
-                <!--<div >-->
-
-                <!--</div>-->
-            <!--</div>-->
-        </div>
+        <div class="doge-editor-con" contenteditable="true" v-html="source"></div>
         <div class="doge-statusbar"></div>
     </div>
 </template>
@@ -65,6 +56,22 @@ export default {
                 `${prefix}-toolbar`,
                 `${prefix}-toolbar--${size}`
             ]
+        },
+        wrapperClasses () {
+            return [
+                `${prefix}-wrapper`
+            ]
+        },
+        wrapperStyles () {
+            let height = this.height
+            if (height === 'auto') {
+                height = '100%'
+            } else if (height <= 100) {
+                height = `${height}%`
+            } else {
+                height = `${height}px`
+            }
+            return { height }
         }
     },
     props: {
@@ -90,10 +97,22 @@ export default {
             validator (v) {
                 return ['normal', 'small', 'large'].indexOf(v) !== -1
             }
+        },
+        height: {
+            type: [Number, String],
+            default: 350
         }
     },
     created () {
         console.debug('created mbdoge editor')
+    },
+    mounted () {
+        // let editHeight = this.height
+        // if (editHeight === 'auto') {
+        //     // 获取元素的父元素 填充高度
+        //     let parentEl = this.$el.parentNode
+        //     console.log()
+        // }
     },
     methods: {
         undo () {

@@ -3,18 +3,36 @@
 
 }
 
-.doge-note-edit {
+//.doge-note-edit {
+//  display: flex;
+//  height: 600px;
+//  textarea {
+//    width: 100%;
+//    height: 100%;
+//  }
+//  .col {
+//    width: 50%;
+//  }
+//}
+
+.doge-wrapper {
   display: flex;
-  height: 600px;
-  textarea {
-    width: 100%;
-    height: 100%;
-  }
-  .col {
-    width: 50%;
-  }
+  flex-direction: column;
+}
+.doge-toolbar {
+  position: relative;
+  flex-shrink: 0;
+}
+.doge-editor-con {
+  position: relative;
+  height: 0;
+  flex: 1;
+}
+.doge-statusbar {
+  flex-shrink: 0;
 }
 
 
 @import "toolbar";
 @import "edit";
+@import "statusbar";

@@ -1,6 +1,5 @@
 
-.mb-doge {
-  position: relative;
+.doge-editor-con {
   overflow: hidden;
   background: #fff;
 
@@ -12,7 +11,13 @@
   padding: 10px;
   font: inherit;
   z-index: 1;
+
   word-wrap: break-word;
+  white-space: pre-wrap;
 
   color: #000;
+
+  outline: none;
+  overflow-y: auto;
+
 }
